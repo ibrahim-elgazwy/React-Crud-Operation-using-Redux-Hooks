@@ -28,8 +28,8 @@ class PostForm extends Component {
         }
 
         let inp = event.currentTarget;
-        if(inp && inp.name == 'title') title = inp.value;
-        if(inp && inp.name == 'body') body = inp.value;
+        if(inp && inp.name === 'title') title = inp.value;
+        if(inp && inp.name === 'body') body = inp.value;
         
         this.setState({title, body, isPostEdit, btnLabel});
     }
