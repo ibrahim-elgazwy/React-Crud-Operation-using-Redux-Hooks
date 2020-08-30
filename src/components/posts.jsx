@@ -21,11 +21,13 @@ class Posts extends Component {
     }
 
     render() {
-        const postsItem = this.props.posts.map(post => (
+        const postsItem = this.props.posts.map((post, index) => (
             <div className="post" key={post.id}>
-                <h4>${post.title}</h4>
-                <p>${post.body}</p>
-                <p className="edit-post">
+                <div className="show-index badge badge-info">{index + 1}</div>
+                <div>
+                    <h4>${post.title}</h4>
+                    <p>${post.body}</p>
+                    <p className="edit-post">
                     <i className="fa fa-pencil-square" 
                        onClick={() => this.handleEditPost(post)}
                        data-toggle="tooltip" data-placement="top" 
@@ -36,7 +38,8 @@ class Posts extends Component {
                        data-toggle="tooltip" data-placement="top" 
                        title="Delete Post">
                     </i>
-                </p>
+                </p>  
+                </div>
             </div>
         ));
         return (

@@ -8,10 +8,19 @@ hr {
 }
 
 .post {
+  display: flex;
+  align-items: center;
   padding: 15px;
   margin-bottom: 10px;
   background: #ddd;
   position: relative;
+}
+
+.post .show-index {
+  margin-right: 30px;
+  padding: 10px;
+  width: 45px;
+  font-size: 17px;
 }
 
 .edit-post {
